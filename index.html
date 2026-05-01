@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Neighbor to Neighbor | The Private Local Network</title>
+    
+    <!-- Typography -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Space+Mono:ital,wght@0,400;0,700;1,400&family=Syne:wght@600;800&display=swap" rel="stylesheet">
+    
+    <!-- GSAP for Interactions -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+    
+    <link rel="stylesheet" href="assets/css/styles.css">
+</head>
+<body>
+
+    <!-- HEADER START -->
+    <header class="site-header">
+        <div class="header-logo">N2N_APP</div>
+        <nav class="header-nav">
+            <a href="#" class="nav-link">Concept</a>
+            <a href="#" class="nav-link">Verification</a>
+            <a href="#" class="nav-link">Standards</a>
+        </nav>
+        <a href="#" class="btn-primary header-btn">Join Waitlist</a>
+    </header>
+    <!-- HEADER END -->
+
+    <main>
+        <!-- HERO SECTION START -->
+        <section class="hero-section">
+            <div class="hero-content">
+                <h1 class="hero-title js-reveal">Like <br>Blind,<br>For Your<br>Block.</h1>
+                <p class="hero-subtitle js-reveal">Private messages centered around live conversation. Discuss specific themes, or invite a neighbor to dive deep into a topic you care about.</p>
+                <a href="#" class="btn-primary btn-large js-reveal">Request Access</a>
+            </div>
+            <div class="hero-visual js-reveal">
+                <svg class="svg-visual" viewBox="0 0 800 800" preserveAspectRatio="xMidYMid slice" xmlns="http://www.w3.org/2000/svg">
+                    <defs>
+                        <pattern id="grid" width="80" height="80" patternUnits="userSpaceOnUse">
+                            <path d="M 80 0 L 0 0 0 80" fill="none" stroke="#27272a" stroke-width="1" />
+                        </pattern>
+                    </defs>
+                    <!-- Background Grid -->
+                    <rect width="800" height="800" fill="#09090b" />
+                    <rect width="800" height="800" fill="url(#grid)" />
+                    
+                    <!-- Terminal Text Labels -->
+                    <text x="20" y="30" fill="#3f3f46" font-family="Space Mono, monospace" font-size="12">SYS.MAP.INITIALIZED // 0.0.1</text>
+                    <text x="20" y="50" fill="#3f3f46" font-family="Space Mono, monospace" font-size="12">STATUS: SECURE</text>
+                    <text x="20" y="770" fill="#3f3f46" font-family="Space Mono, monospace" font-size="12">COORDINATES: LOCAL.BLOCK.09</text>
+
+                    <!-- Decorative Overlays -->
+                    <circle cx="400" cy="400" r="300" fill="none" stroke="#27272a" stroke-width="1" stroke-dasharray="4 12" />
+                    <circle cx="400" cy="400" r="200" fill="none" stroke="#27272a" stroke-width="1" stroke-dasharray="4 12" />
+
+                    <!-- Base Solid Lines -->
+                    <path d="M160,240 L400,160 L640,320 L720,560 M400,160 L400,480 L640,320 M400,480 L240,640 L160,240 M400,480 L560,720 L720,560 M160,240 L80,480 L240,640" fill="none" stroke="#3f3f46" stroke-width="2" />
+                    
+                    <!-- Active Dashed Lines -->
+                    <path class="svg-dashed-line" d="M400,480 L240,640 M400,480 L640,320 M160,240 L400,160" fill="none" stroke="#ccff00" stroke-width="2" stroke-dasharray="8, 8" />
+                    
+                    <!-- Nodes -->
+                    <g class="node">
+                        <rect x="144" y="224" width="32" height="32" fill="#ccff00" />
+                        <text x="144" y="214" fill="#ccff00" font-family="Space Mono, monospace" font-size="14" font-weight="bold">NODE_01</text>
+                    </g>
+                    <g class="node">
+                        <rect x="384" y="144" width="32" height="32" fill="#f4f4f5" />
+                        <text x="384" y="134" fill="#f4f4f5" font-family="Space Mono, monospace" font-size="14" font-weight="bold">NODE_02</text>
+                    </g>
+                    <g class="node">
+                        <rect x="624" y="304" width="32" height="32" fill="#09090b" stroke="#ccff00" stroke-width="4" />
+                        <text x="624" y="294" fill="#ccff00" font-family="Space Mono, monospace" font-size="14" font-weight="bold">NODE_03</text>
+                    </g>
+                    <g class="node">
+                        <rect x="384" y="464" width="32" height="32" fill="#ccff00" />
+                        <text x="396" y="520" fill="#ccff00" font-family="Space Mono, monospace" font-size="14" font-weight="bold">HUB_LOCAL</text>
+                        <rect x="392" y="472" width="16" height="16" fill="#09090b" />
+                    </g>
+                    <g class="node">
+                        <rect x="704" y="544" width="32" height="32" fill="#3f3f46" />
+                        <text x="704" y="534" fill="#8b8b93" font-family="Space Mono, monospace" font-size="14" font-weight="bold">NODE_04</text>
+                    </g>
+                    <g class="node">
+                        <rect x="224" y="624" width="32" height="32" fill="#09090b" stroke="#f4f4f5" stroke-width="4" />
+                        <text x="224" y="614" fill="#f4f4f5" font-family="Space Mono, monospace" font-size="14" font-weight="bold">NODE_05</text>
+                    </g>
+                    <g class="node">
+                        <rect x="544" y="704" width="32" height="32" fill="#ccff00" />
+                        <text x="544" y="694" fill="#ccff00" font-family="Space Mono, monospace" font-size="14" font-weight="bold">NODE_06</text>
+                    </g>
+                    <g class="node">
+                        <rect x="64" y="464" width="32" height="32" fill="#f4f4f5" />
+                        <text x="64" y="454" fill="#f4f4f5" font-family="Space Mono, monospace" font-size="14" font-weight="bold">NODE_07</text>
+                    </g>
+                </svg>
+                <div class="visual-overlay-text">LOCAL_SECURE_NODE_01</div>
+            </div>
+        </section>
+        <!-- HERO SECTION END -->
+
+        <!-- MARQUEE START -->
+        <div class="marquee-container border-tb">
+            <div class="marquee-track">
+                <span class="marquee-text">NEIGHBOR TO NEIGHBOR &nbsp; // &nbsp; PRIVATE MESSAGING &nbsp; // &nbsp; LIVE CONVERSATION &nbsp; // &nbsp; </span>
+                <span class="marquee-text">NEIGHBOR TO NEIGHBOR &nbsp; // &nbsp; PRIVATE MESSAGING &nbsp; // &nbsp; LIVE CONVERSATION &nbsp; // &nbsp; </span>
+                <span class="marquee-text">NEIGHBOR TO NEIGHBOR &nbsp; // &nbsp; PRIVATE MESSAGING &nbsp; // &nbsp; LIVE CONVERSATION &nbsp; // &nbsp; </span>
+            </div>
+        </div>
+        <!-- MARQUEE END -->
+
+        <!-- CORE CONCEPT SECTION START -->
+        <section class="concept-section">
+            <div class="concept-grid">
+                <div class="concept-block border-r border-b js-block">
+                    <h2 class="block-title">01. Private</h2>
+                    <p class="block-text">Discussions happen in private messages centered around live conversation. No endless public feeds. Just focused dialogue.</p>
+                </div>
+                <div class="concept-block border-b js-block">
+                    <h2 class="block-title">02. Thematic</h2>
+                    <p class="block-text">Create a specific theme or topic. Invite a neighbor who is genuinely interested. Cut through the noise of typical neighborhood apps.</p>
+                </div>
+            </div>
+        </section>
+        <!-- CORE CONCEPT SECTION END -->
+
+        <!-- VERIFICATION SECTION START -->
+        <section class="verification-section">
+            <h2 class="section-heading js-reveal">The Anti-Bot Verification</h2>
+            <div class="verification-content">
+                <div class="verification-text js-reveal">
+                    <p>Register with local number and address verifications that would be highly annoying for non-locals.</p>
+                    <p>We designed a slow, manual process that cannot be automated. The boxes change formats and move. The questions evade bots by relying on complex memory systems and spatial logic.</p>
+                </div>
+                
+                <article class="logic-box js-reveal">
+                    <div class="logic-header">
+                        <span>SYSTEM_REQUIREMENT</span>
+                        <span>HUMAN_VALIDATION</span>
+                    </div>
+                    <div class="logic-body">
+                        <p class="mono-text">> "Write this down, it is the answer to question 3."</p>
+                        <p class="mono-text">> "Write this down, it is the answer to question 7."</p>
+                        <p class="mono-text highlight">> "Divide 4 by the answer to question 6 and use the first 4 decimals as the answer to question 5."</p>
+                    </div>
+                </article>
+            </div>
+        </section>
+        <!-- VERIFICATION SECTION END -->
+
+        <!-- STANDARDS SECTION START -->
+        <section class="standards-section border-t">
+            <div class="standards-layout">
+                <div class="standards-header js-reveal">
+                    <h2 class="section-heading">Locality Based Attestations</h2>
+                    <p class="standards-sub">Questions 1, 2, 4, and 5 are locality based and act as attestations for account usage.</p>
+                </div>
+                
+                <div class="rules-grid">
+                    <div class="rule-card js-block">
+                        <div class="rule-num">RULE_01</div>
+                        <h3 class="rule-title">No Misleading Info</h3>
+                        <p class="rule-text">You attest that you will not intentionally post misleading information. The network relies on localized truth.</p>
+                    </div>
+                    <div class="rule-card js-block">
+                        <div class="rule-num">RULE_02</div>
+                        <h3 class="rule-title">Inquiry Protocol</h3>
+                        <p class="rule-text">If you post unverified information, it must be to question it or ask for clarification from the community.</p>
+                    </div>
+                    <div class="rule-card js-block">
+                        <div class="rule-num">EXAMPLE</div>
+                        <div class="example-box">
+                            <p class="query">Q: "I hear looting is up on B street?"</p>
+                            <p class="response">A: Responses must include evidentiary refutes, or verifiable evidence of truth.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- STANDARDS SECTION END -->
+
+    </main>
+
+    <!-- FOOTER START -->
+    <footer class="site-footer border-t">
+        <div class="footer-top">
+            <h2 class="footer-logo">N2N</h2>
+            <div class="footer-links">
+                <a href="#">Manifesto</a>
+                <a href="#">Waitlist Status</a>
+                <a href="#">Privacy Protocol</a>
+            </div>
+        </div>
+        <div class="footer-bottom border-t">
+            <p>&copy; 2024 Neighbor to Neighbor Mockup. Strict Flat UI Prototype.</p>
+        </div>
+    </footer>
+    <!-- FOOTER END -->
+
+    <script src="assets/js/scripts.js"></script>
+</body>
+</html>
